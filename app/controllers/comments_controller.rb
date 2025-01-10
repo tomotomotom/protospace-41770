@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments
-      render "prototypes/show" , status: :unprocessable_entity
+      render "/prototypes/#{@comment.prototype.id}" , status: :unprocessable_entity
     end
   end
 
